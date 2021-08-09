@@ -13,18 +13,21 @@ app.get('/', (req, res)=>{
     res.send('Shh you shouldn\'t be here')
 })
 
+
 app.post('/', (req, res) => {
     res.send(405, 'Not allowd!');
 });
 
 // app.use('/entries', entryRoute);
 
-app.get('/entries', (req, res) => {
-    res.send(JSON.stringify(entryData));
-})
+// app.use('/home', entryRoute);
 
-app.post('/entries', (req, res) => {
-    res.send({name: 'werty', message: 'asdf message'});
+// app.get('/home', (req,res) =>{
+//     res.send(JSON.stringify(entryData))
+// })
+
+app.post('/home', (req, res) =>{
+    console.log(request.body);
 })
 
 module.exports = app;
