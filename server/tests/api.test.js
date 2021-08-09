@@ -18,6 +18,10 @@ describe('API Server', () => {
     });
 
     test('Responds to get / with status 200', (done) => {
+        request(api).get('/').expect(200).expect('Shh you shouldn\'t be here', done);
+    });
+
+    test('Responds to get /entries with status 200', (done) => {
         request(api).get('/').expect(200, done);
     });
 });
