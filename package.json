@@ -1,0 +1,29 @@
+{
+  "name": "pipline-predators",
+  "version": "1.0.0",
+  "description": "LAP 1 Portfolio Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/partyzl/pipline-predators.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/partyzl/pipline-predators/issues"
+  },
+  "homepage": "https://github.com/partyzl/pipline-predators#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "jest": "^27.0.6",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
