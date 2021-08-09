@@ -24,4 +24,8 @@ describe('API Server', () => {
     test('Responds to get /entries with status 200', (done) => {
         request(api).get('/entries').expect(200, done);
     });
+
+    test('responds to invalid method request with 405', (done) => {
+        request(api).post('/').expect(405, done);
+    });
 });
