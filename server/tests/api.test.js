@@ -22,6 +22,6 @@ describe('API Server', () => {
     });
 
     test('Responds to get /entries with status 200', (done) => {
-        request(api).get('/').expect(200, done);
+        request(api).get('/entries').expect(200, done);
     });
 });
