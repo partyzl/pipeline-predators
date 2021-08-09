@@ -4,6 +4,8 @@
   "description": "LAP 1 Portfolio Project",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
+    "dev":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
