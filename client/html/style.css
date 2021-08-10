@@ -3,15 +3,27 @@
     font-size: 20px;
 }
 
+/* nav styling */
+
 nav{
     color: white;
 }
 
-
-li{
+li {
     display: inline-flex;
-    padding: 10px;  
+    padding: 10px;
 }
+
+ul {
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 5%;
+}
+
+/* main body styling */
 
 table, th, td {
     border: 1px solid white;
@@ -26,12 +38,17 @@ table, th, td {
 
 }
 
-table{
-    
-}
-
 #plus-icon{
     border-radius: 100px;
     border-width: 3px;
     border-color: white;
+}
+
+/* footer styling */
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
 }
