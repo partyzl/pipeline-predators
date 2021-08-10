@@ -1,5 +1,5 @@
 //Emoji reacts
-///////MAKE A DATA FILE ON THE SERVER WITH EMOJI COUNTERS
+///////MAKE A DATA FILE ON THE SERVER WITH EMOJI
 // let loveCount;
 // let sadCount;
 // let shockCount;
