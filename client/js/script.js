@@ -54,7 +54,7 @@ newEntry.addEventListener("submit", function(e){
 })
 
 sendJournalEntry = data => {
-    fetch(`${herokuUrl}/home/create`, {
+    fetch(`${herokuUrl}/create`, {
         method: 'post',
         headers: {
             "Content-type": "application/json"

@@ -26,8 +26,8 @@ app.get('/home', (req,res) =>{
     res.send(JSON.stringify(entryData))
 })
 
-app.post('/home/create', (req, res) =>{
-    console.log(request.body);
+app.post('/create', (req, res) =>{
+    console.log(req.body);
 })
 
 module.exports = app;
