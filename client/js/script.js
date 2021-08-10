@@ -1,5 +1,6 @@
 //variables
 const herokuUrl = "https://pipeline-predators.herokuapp.com"
+const newEntry = document.querySelector("form.newEntry")
 //variables
 
 //display all entries on the page
@@ -39,3 +40,27 @@ const getEntries=()=>{
         })
     })
 }
+
+newEntry.addEventListener("submit", function(e){
+    e.preventDefault();
+    let formElements = document.querySelector("form.newEntry").elements;
+    console.log(formElements);
+    let journalEntry = formElements["entry"].value;
+    let data = {
+        "entry": journalEntry
+    }
+    console.log("Data to POST:", data);
+    sendJournalEntry(data);
+})
+
+sendJournalEntry = data => {
+    fetch(`${herokuUrl}/home`, {
+        method: 'post',
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+}
+
+getEntries();
