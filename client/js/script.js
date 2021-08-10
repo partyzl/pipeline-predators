@@ -39,3 +39,5 @@ const getEntries=()=>{
         })
     })
 }
+
+module.exports = getEntries;

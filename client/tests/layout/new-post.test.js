@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 
-const exp = require('constants');
 const fs = require('fs');
 const path = require('path');
 const html = fs.readFileSync(path.resolve(__dirname, '../../html/new-post.html'), 'utf8');
