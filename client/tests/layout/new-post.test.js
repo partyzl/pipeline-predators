@@ -20,6 +20,18 @@ describe('new-post.html', () => {
             expect(title.textContent).toBe('Create a New Post');
         })
     })
+    
+    describe('h1', () => {
+        let heading;
+
+        test('h1 exists and encourages user to make a post', () => {
+            heading = document.querySelector('section > h1');
+            expect(heading).toBeTruthy();
+            const headingLower = heading.textContent.toLowerCase();
+            expect(headingLower).toContain('make');
+            expect(headingLower).toContain('post');
+        })
+    })
 
     describe('body', () => {
         describe('Buttons', () => {
@@ -68,5 +80,6 @@ describe('new-post.html', () => {
                 expect(small.textContent).toContain('characters remaining');
             })
         })
+
     })
 })
