@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="form.css">
-    <script src="form.js"></script>
+
+    <script defer src="../bundle.js"></script>
+
     <title>Create a New Post</title>
 </head>
 <body>
@@ -36,13 +38,16 @@
                 </section> 
                 -->
                 <section class="py-4">
-                    <label for="entry" data-toggle="tooltip" title="This is a required field. Please stay within character limit." class="label">Journal Entry: </label>
-                    <textarea name="entry" id="entry" cols="50" rows="20" class="form-control" maxlength="280" required></textarea>        
-                    
-                    <small id="entryHelp" class="form-text text-muted"><span id="count">280</span> characters remaining</small>
+                    <form method="POST" class="newEntry" role="form">
 
-                </section>
-                <button type="submit" class="btn btn-primary">Post Entry</button>
+                        <label for="entry" data-toggle="tooltip" title="This is a required field. Please stay within character limit." class="label">Journal Entry: </label>
+                        <textarea name="entry" id="entry" cols="50" rows="20" class="form-control" maxlength="280" required></textarea>        
+                        
+                        <small id="entryHelp" class="form-text text-muted"><span id="count">280</span> characters remaining</small>
+                        
+                    </section>
+                    <button type="submit" class="btn btn-primary">Post Entry</button>
+                </form>
             </section>
         </section>
         <!-- New post input fields -->

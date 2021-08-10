@@ -1,21 +1,9 @@
-// Characters remaining for user input
-const characters = document.querySelector('span');
 const entry = document.getElementById('entry');
+const characters = document.querySelector('small > span');
 
-function characterCount() {
-//     document.getElementById()
-    let counter;
-    let textEntered = entry.textContent;
-    counter = (280 - (textEntered.length));
-    characters.textContent = `${counter}`;
-    console.log(counter);
-} 
+function characterCount(){
+   characters.textContent = 280 - entry.value.length;
+}
 
-characters.addEventListener('onkeypress', characterCount);
-
-
-//Emoji buttons
-
-// let 
-
-
+entry.addEventListener('keypress', characterCount);
+entry.addEventListener('keyup', characterCount);
