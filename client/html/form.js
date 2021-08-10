@@ -1,21 +1,8 @@
-const characters = document.querySelector('small');
-const entry = document.querySelector('entry');
+const entry = document.getElementById('entry');
+const characters = document.querySelector('small > span');
 
 function characterCount(){
-    let textEntered;
-    let counter;
-    textEntered = document.getElementById('entry').textContent.split("");
-    characters.textContent = characters.length;
-    if (characters.length > 280) {
-        textEntered.value = textEntered.value.substring(0, 280);
-    }
-    
-    counter = (280 - (textEntered.length));
-
-    document.getElementById('entryHelp').textContent = `${counter}`;
-
-    console.log(counter);
+    characters.textContent = 280 - entry.value.length - 1;
 }
 
-characters.addEventListener('keyup', characterCount);
-
+entry.addEventListener('keypress', characterCount);
