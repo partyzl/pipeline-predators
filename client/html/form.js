@@ -1,21 +1,21 @@
-const characters = document.querySelector('small');
-const entry = document.querySelector('entry');
+// Characters remaining for user input
+const characters = document.querySelector('span');
+const entry = document.getElementById('entry');
 
-function characterCount(){
-    let textEntered;
+function characterCount() {
+//     document.getElementById()
     let counter;
-    textEntered = document.getElementById('entry').textContent.split("");
-    characters.textContent = characters.length;
-    if (characters.length > 280) {
-        textEntered.value = textEntered.value.substring(0, 280);
-    }
-    
+    let textEntered = entry.textContent;
     counter = (280 - (textEntered.length));
-
-    document.getElementById('entryHelp').textContent = `${counter}`;
-
+    characters.textContent = `${counter}`;
     console.log(counter);
-}
+} 
 
-characters.addEventListener('keyup', characterCount);
+characters.addEventListener('onkeypress', characterCount);
+
+
+//Emoji buttons
+
+// let 
+
 
