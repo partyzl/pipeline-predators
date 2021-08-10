@@ -15,29 +15,49 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top d-flex justify-content-between">
-      <img href='assets/images/example.jpg'>
-      <ul>
-        <li><button class = 'btn btn-outline-light'>Home</button></li>
-        <li><button class = 'btn btn-outline-light'>Create entry</button></li>
-      </ul>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top d-flex justify-content-between">
+          <img src='example.png' class="img" alt="placeholder">
+          <ul>
+            <li><button class = 'btn btn-outline-light'>Home</button></li>
+            <li><button class = 'btn btn-outline-light'>Create entry</button></li>
+          </ul>
+        </nav>
+      <!-- Navbar -->
+  </header>
+
+    <section class=" mx-auto m-5 d-flex flex-column flex-content-center page-container">
       
-    </nav>
-    <section class=" mx-auto m-5 d-flex flex-column flex-content-center table-container">
-      <table class=' m-5'>
-        <tr>
-          <th>User </th>
-          <th>Entry </th>
-          <th>React</th>
-        </tr>
-        <tr>
-          <td> Admin </td>
-          <td>  First entry </td>
-          <td> </td>
-        </tr>
-      </table>
-      <section>
-        
+      <!-- Individal post section-->
+      <section class='post mx-auto my-3 p-3'>
+
+          <ul class=' d-flex justify-content-between'>
+            <li id='user'>USER</li>
+            <li id='date'>DATE</li>
+          </ul>
+
+          <p> USER POST GOES HERE </p>
+
+          <section class = 'react-buttons'>
+            <div class='emoji-count'>
+              <button type="button" class='react' id='love' >❤</button>
+              <label for='love'>0</label>
+            </div>
+            <div class='emoji-count'>
+              <button type="button"  class='react' id='sad'>😭</button>
+              <label for='sad'>0</label>
+            </div>
+            <div class='emoji-count'>
+              <button type="button" class='react' id='shock'>😮</button>
+              <label for='shock'>0</label>
+            </div>
+            <div class='emoji-count'>
+              <button type="button" class='react' id='comment'>Comment</button>
+              <label for='shock'></label>
+            </div>
+          </section>
+
       </section>
       <button class='mx-auto p-3' id='plus-icon'> + </button>
     </section>

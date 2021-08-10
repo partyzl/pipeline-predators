@@ -13,17 +13,48 @@ li{
     padding: 10px;  
 }
 
+img{
+    width: 4%;
+}
+
 table, th, td {
     border: 1px solid white;
   }
 
-.table-container{
-    background-color: rgb(17, 155, 86);
+.page-container{
+    background-color: rgb(54, 54, 54);
     color: white;
     width: 90%;
-    height: 500px;
+    min-height: 90vh;
+    min-width: 90vw;
     border-radius: 20px;
 
+}
+
+.post{
+    width: 95%;
+    background-color: rgba(107, 211, 211, 0.6);
+    color: black;
+    border-width: 5px;
+    border-style: double;
+    border-radius: 20px;
+
+}
+
+
+.react:hover{
+    background-color: orange;
+}
+
+.react-buttons{
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+}
+
+.emoji-count{
+    display: flex;
+    flex-direction: column;
 }
 
 table{
@@ -31,7 +62,11 @@ table{
 }
 
 #plus-icon{
-    border-radius: 100px;
+    border-radius: 100%;
     border-width: 3px;
     border-color: white;
+}
+
+label{
+    text-align: center;
 }

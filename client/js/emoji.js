@@ -9,11 +9,10 @@ const sadReact = document.getElementById('sad');
 const shockReact = document.getElementById('shock');
 const reactButtons = document.getElementsByClassName('reactions')
 
-function emojiReactions(e){
-
-    function reactionCount
+function emojiReactions(type){
+    function reactionCount() {
         let reactionType = button.id;
-        switch (reaction) {
+        switch (reactionType) {
             case 'love':
                 loveCount +=;
                 break;
