@@ -22,11 +22,11 @@ app.post('/', (req, res) => {
 
 // app.use('/home', entryRoute);
 
-// app.get('/home', (req,res) =>{
-//     res.send(JSON.stringify(entryData))
-// })
+app.get('/home', (req,res) =>{
+    res.send(JSON.stringify(entryData))
+})
 
-app.post('/home', (req, res) =>{
+app.post('/home/create', (req, res) =>{
     console.log(request.body);
 })
 
