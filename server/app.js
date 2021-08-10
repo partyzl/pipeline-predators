@@ -1,18 +1,19 @@
 const express = require('express')
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const fs = require('fs');
 
 const { entryData } = JSON.parse(fs.readFileSync('./data.json'));
 
 const app = express();
 app.use(cors());
+app.use(bodyParser.json());
 
 // const entryRoute = require('./controller/entryController');
 
 app.get('/', (req, res)=>{
     res.send('Shh you shouldn\'t be here')
 })
-
 
 app.post('/', (req, res) => {
     res.send(405, 'Not allowd!');
@@ -22,12 +23,12 @@ app.post('/', (req, res) => {
 
 // app.use('/home', entryRoute);
 
-// app.get('/home', (req,res) =>{
-//     res.send(JSON.stringify(entryData))
-// })
+app.get('/home', (req,res) =>{
+    res.send(JSON.stringify(entryData));
+})
 
 app.post('/home', (req, res) =>{
-    console.log(request.body);
+    res.send(201, req.body);
 })
 
 module.exports = app;
