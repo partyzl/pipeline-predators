@@ -10,42 +10,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <!-- Put favicon image in file-->
-    <link rel='favicon' type='image' href='assets/images/example.jpg'>  
+    <link rel='favicon' type='image' href='example.png'>  
     <title>Pipeline Predators</title>
   </head>
 
   <body>
+    <header>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top d-flex justify-content-between">
-      <img href='assets/images/example.jpg'>
+      <img src='example.png' class="img" alt="placeholder">
       <ul>
-        <li><button class = 'btn btn-outline-light'>Home</button></li>
-        <li><button class = 'btn btn-outline-light'>Create entry</button></li>
+        <li><button class = 'btn btn-outline-light'>Create Post</button></li>
+        <li><button class = 'btn btn-outline-light'>Create Comment</button></li>
       </ul>
-      
-    </nav>
-    <section class=" mx-auto m-5 d-flex flex-column flex-content-center table-container">
-      <table class=' m-5'>
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <main>
+    <!-- Post and comment output fields -->
+    <section class="mx-auto m-5 d-flex flex-column flex-content-center table-container">
+      <table class='m-5'>
         <tr>
           <th>User </th>
           <th>Entry </th>
           <th>React</th>
         </tr>
         <tr>
-          <td> Admin </td>
-          <td>  First entry </td>
-          <td> </td>
+          <td>Admin</td>
+          <td>First entry</td>
+          <td></td>
         </tr>
       </table>
-      <section>
-        
-      </section>
       <button class='mx-auto p-3' id='plus-icon'> + </button>
     </section>
-
-
+    <!-- Post and comment output fields -->
+    </main>
     <footer>
-      <!--- FOOTER -->
-    </footer>
+      <section class="footer">
+          Brought to you by the Pipeline Predators: 
+          <a href="https://github.com/partyzl/pipeline-predators/tree/staging">GitHub</a>    
+      </section>
+  </footer>
   </body>
 
 </html>
