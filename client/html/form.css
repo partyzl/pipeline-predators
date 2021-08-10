@@ -1,3 +1,11 @@
+
+/* nav bar styling */
+
+#heading {
+    width: 90%;
+    margin: 20px;
+}
+
 li {
     display: inline-flex;
     padding: 10px;
@@ -7,6 +15,13 @@ ul {
     padding-top: 15px;
     box-sizing: border-box;
 }
+
+.img {
+    width: 5%;
+}
+
+/* main body stylng */
+
 
 #entry {
     height: 100px;
@@ -22,19 +37,13 @@ ul {
     border-radius: 20px;
 }
 
-#heading {
-    width: 90%;
-    margin: 20px;
-}
 
 .label {
     font-weight: bolder;
     font-size: larger;
 }
 
-.img {
-    width: 5%;
-}
+/* footer styling */
 
 .footer {
     width: 100%;

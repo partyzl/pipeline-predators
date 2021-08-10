@@ -3,21 +3,28 @@
     font-size: 20px;
 }
 
-nav{
+/* nav styles */
+
+nav {
     color: white;
 }
 
-
-li{
+li {
     display: inline-flex;
     padding: 10px;  
 }
+
+.img {
+    width: 5%;
+}
+
+/* main body styling */
 
 table, th, td {
     border: 1px solid white;
   }
 
-.table-container{
+.table-container {
     background-color: rgb(17, 155, 86);
     color: white;
     width: 90%;
@@ -26,7 +33,7 @@ table, th, td {
 
 }
 
-table{
+table {
     
 }
 
@@ -34,4 +41,13 @@ table{
     border-radius: 100px;
     border-width: 3px;
     border-color: white;
+}
+
+/* footer styling */
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
 }
