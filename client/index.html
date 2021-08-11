@@ -22,6 +22,34 @@
     </nav>
       <!-- Navbar -->
   </header>
+  <main>
+    <section id="heading" class="mx-auto">
+        <h1>Make a new post below...</h1>
+    </section>
+    <!-- New post input fields (name, journal entry, submit)-->
+    <section class="main-section form-row justify-content-center mx-auto">
+        <section class="form-group col-md-4">
+            <!--
+            <section class="py-4">
+                <label for="name" data-toggle="tooltip" title="This is not a required field. You may leave it blank if you want to be anonymous.">Name: </label>
+                <input type="text" id="name" name="name" class="form-control">
+            </section> 
+            -->
+            <section class="py-4">
+                <form method="POST" class="newEntry" role="form">
+
+                    <label for="entry" data-toggle="tooltip" title="This is a required field. Please stay within character limit." class="label">Journal Entry: </label>
+                    <textarea name="entry" id="entry" cols="50" rows="20" class="form-control" maxlength="280" required></textarea>        
+                    
+                    <small id="entryHelp" class="form-text text-muted"><span id="count">280</span> characters remaining</small>
+                    
+                </section>
+                <button type="submit" class="btn btn-primary">Post Entry</button>
+            </form>
+        </section>
+    </section>
+    <!-- New post input fields -->
+</main>
 
     <section class=" mx-auto m-5 d-flex flex-column flex-content-center page-container">
       
@@ -89,7 +117,7 @@
       View the Pipeline Predators repo: <a href="https://github.com/partyzl/pipeline-predators/tree/staging" target="_blank"><img src="github-logo.png" class="img" alt="github logo"></a>
     </footer>
   </body>
-</html>
 
+</html>
 
 
