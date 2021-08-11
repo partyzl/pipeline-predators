@@ -3,18 +3,23 @@
 // let loveCount;
 // let sadCount;
 
+const { urlencoded } = require("express");
+
 
 const loveReact = document.getElementById('love');
 const sadReact = document.getElementById('sad');
 const shockReact = document.getElementById('shock');
 const reactButtons = document.getElementsByClassName('reactions')
 
-function emojiReactions(type){
-    function reactionCount() {
-        let reactionType = button.id;
+function emojiCount(reactionType){
         switch (reactionType) {
             case 'love':
-                loveCount +=;
+                fetch url(HERUKOURL)
+                response.json().then(data => {
+                    data.id[`${reactionType}`] =+;
+                    
+                    
+                
                 break;
             case 'sad':
                 sadCount +=;
