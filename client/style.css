@@ -67,9 +67,7 @@ label {
 }
 
 .react:hover {
-    background-color: orange;
     box-shadow: 0 5px 10px 0 rgba(170, 170, 170, 0.8);
-    border-style: inset;
 }
 
 .react-buttons {
@@ -84,9 +82,8 @@ label {
 }
 
 button {
+    border-style: none;
     border-radius: 50px;
-    border-style: outset;
-    border-color: tan;
     padding: 0 10px 0 10px;
 }
 
