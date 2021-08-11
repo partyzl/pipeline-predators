@@ -1,37 +1,121 @@
-*{
-    font-family: arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
 }
 
-nav{
+/* nav styling */
+
+nav {
     color: white;
+    background-color: black;
 }
 
-
-li{
+li {
     display: inline-flex;
-    padding: 10px;  
+    padding: 10px;
 }
 
-table, th, td {
-    border: 1px solid white;
-  }
+ul {
+    padding-top: 15px;
+    box-sizing: border-box;
+}
 
-.table-container{
-    background-color: rgb(17, 155, 86);
+.logo {
+    width: 15%;
+}
+
+.img {
+    width: 30px;
+    height: 10%;
+}
+
+/* main body styling */
+
+.page-container {
+    background-color: rgb(255, 160, 36);
     color: white;
     width: 90%;
-    height: 500px;
+    min-height: 90vh;
+    min-width: 90vw;
     border-radius: 20px;
-
 }
 
-table{
-    
+.post {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.618);
+    color: black;
+    border-width: 5px;
+    border-style: double;
+    border-color:lightyellow;
+    border-radius: 20px;
 }
 
-#plus-icon{
-    border-radius: 100px;
-    border-width: 3px;
-    border-color: white;
+.input {
+    font-weight: bold;
+}
+
+label {
+    text-align: center;
+}
+
+/* button styles */
+
+.react {
+    margin: 5px;
+}
+
+.react:hover {
+    background-color: orange;
+    box-shadow: 0 5px 10px 0 rgba(170, 170, 170, 0.8);
+    border-style: inset;
+}
+
+.react-buttons {
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+}
+
+.emoji-count {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 50px;
+    border-style: outset;
+    border-color: tan;
+    padding: 0 10px 0 10px;
+}
+
+#love {
+    color: red;
+}
+
+
+/* footer styles */
+
+.footer {
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .page-container{
+        background-color: lime;
+    }
+
+
+    .footer {
+        text-align: center;
+        font-size: small;
+    }
+
+
 }
