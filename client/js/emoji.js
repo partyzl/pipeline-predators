@@ -1,19 +1,18 @@
 //Emoji reacts
-///////MAKE A DATA FILE ON THE SERVER WITH EMOJI COUNTERS
+///////MAKE A DATA FILE ON THE SERVER WITH EMOJI
 // let loveCount;
 // let sadCount;
-// let shockCount;
+
 
 const loveReact = document.getElementById('love');
 const sadReact = document.getElementById('sad');
 const shockReact = document.getElementById('shock');
 const reactButtons = document.getElementsByClassName('reactions')
 
-function emojiReactions(e){
-
-    function reactionCount
+function emojiReactions(type){
+    function reactionCount() {
         let reactionType = button.id;
-        switch (reaction) {
+        switch (reactionType) {
             case 'love':
                 loveCount +=;
                 break;
@@ -26,7 +25,11 @@ function emojiReactions(e){
             default:
                 return false;
         reactButtons.disable = true;
+    
+
             
             }
     }
 }
+
+function
