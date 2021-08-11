@@ -32,3 +32,5 @@ router.post('/home', (req, res)=> {
         .send('you made a boo boo')
     }
 })
+
+module.exports = router;
