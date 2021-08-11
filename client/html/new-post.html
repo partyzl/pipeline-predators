@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="form.css">
-
     <script defer src="../bundle.js"></script>
-
     <title>Create a New Post</title>
 </head>
 <body>
@@ -18,8 +16,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top d-flex justify-content-between">
             <img src='example.png' class="img" alt="placeholder">
             <ul>
-              <li><button class = 'btn btn-outline-light'>Home</button></li>
-              <li><button class = 'btn btn-outline-light'>Create entry</button></li>
+              <li><button class = 'btn btn-outline-light' onclick="window.location.href = 'homepage.html';">Home</button></li>
+              <li><button class = 'btn btn-outline-light' onclick="window.location.href = 'index.html';">Create Comment</button></li>
             </ul>
           </nav>
         <!-- Navbar -->
@@ -28,29 +26,29 @@
         <section id="heading" class="mx-auto">
             <h1>Make a new post below...</h1>
         </section>
-        <!-- New post input fields (name, journal entry, submit)-->
+        <!-- New post input fields (post, character counter, submit)-->
         <section class="main-section form-row justify-content-center mx-auto">
             <section class="form-group col-md-4">
-                <!--
+
+                <!--This was for the name field but this has been removed-->
+                <!--    
                 <section class="py-4">
                     <label for="name" data-toggle="tooltip" title="This is not a required field. You may leave it blank if you want to be anonymous.">Name: </label>
                     <input type="text" id="name" name="name" class="form-control">
                 </section> 
                 -->
+
                 <section class="py-4">
                     <form method="POST" class="newEntry" role="form">
-
                         <label for="entry" data-toggle="tooltip" title="This is a required field. Please stay within character limit." class="label">Journal Entry: </label>
                         <textarea name="entry" id="entry" cols="50" rows="20" class="form-control" maxlength="280" required></textarea>        
-                        
                         <small id="entryHelp" class="form-text text-muted"><span id="count">280</span> characters remaining</small>
-                        
                     </section>
                     <button type="submit" class="btn btn-primary">Post Entry</button>
                 </form>
             </section>
         </section>
-        <!-- New post input fields -->
+        <!-- New post input fields (post, character counter, submit)-->
     </main>
     <footer>
         <section class="footer">

@@ -1,25 +1,28 @@
-*{
+* {
     font-family: arial, sans-serif;
     font-size: 20px;
 }
+
+/* nav styling */
 
 nav{
     color: white;
 }
 
-
-li{
+li {
     display: inline-flex;
-    padding: 10px;  
+    padding: 10px;
 }
 
-img{
-    width: 4%;
+ul {
+    padding-top: 15px;
+    box-sizing: border-box;
 }
 
-table, th, td {
-    border: 1px solid white;
-  }
+.img {
+    width: 5%;
+}
+
 
 .page-container{
     background-color: rgb(54, 54, 54);
@@ -57,9 +60,6 @@ table, th, td {
     flex-direction: column;
 }
 
-table{
-    
-}
 
 #plus-icon{
     border-radius: 100%;
@@ -70,3 +70,11 @@ table{
 label{
     text-align: center;
 }
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+}
+
