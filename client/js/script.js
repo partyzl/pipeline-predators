@@ -2,6 +2,7 @@
 const herokuUrl = "https://pipeline-predators.herokuapp.com"
 const newEntry = document.querySelector("#entry").value;
 const body = document.getElementById("main-body");
+const element = document.getElementById('entry')
 //variables
 
 //display all entries on the page
@@ -65,21 +66,23 @@ const getEntries=()=>{
 // }
 
 const data = {entry};
-
-fetch(`${herokuUrl}/create`, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-})
-.then(res => res.json())
-.then(data => {
-  //  console.log(data);
-    body.appendChild(data);
-})
-.catch((error)=>{
-    console.log('Error: ', error);
+element.addEventListener("submit", function(e){
+    e.preventDefault();
+    fetch(`${herokuUrl}/home`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        // body.appendChild(data);
+    })
+    .catch((error)=>{
+        console.log('Error: ', error);
+    })
 })
 
 getEntries();

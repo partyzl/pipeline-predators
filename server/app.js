@@ -17,11 +17,11 @@ router.post('/', (req, res) => {
     res.send(405, 'Not allowd!');
 });
 
-router.post('/create', (req, res) =>{
+router.post('/home', (req, res) =>{
     res.send(201, req.body);
 })
 
-router.get('/home', (req,res) =>{
+router.get('/home/', (req,res) =>{
     res.send(JSON.stringify(entryData))
 })
 
