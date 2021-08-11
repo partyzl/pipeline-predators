@@ -5,7 +5,7 @@
     font-size: 20px;
 }
 
-/* nav styling */
+/* nav/header styles */
 
 nav {
     color: white;
@@ -32,7 +32,7 @@ ul {
     height: 10%;
 }
 
-/* main body styling */
+/* main body styles */
 
 .page-container {
     background-color: rgb(255, 160, 36);
@@ -60,9 +60,10 @@ ul {
 textarea {
     width: 300px;
     height: 150px;
-  }
+    columns: 50;
+}
 
-.input {
+.input, label {
     font-weight: bold;
 }
 
@@ -117,11 +118,23 @@ button {
     padding-bottom: 15px;
 }
 
-
+/* mobile styles */
 @media only screen and (max-width: 600px) {
+
+    .logo {
+        width: 60%;
+        padding: 10px;
+    }
 
     .page-container{
         background-color: lime;
+    }
+
+    textarea {
+        height: 150px;
+        resize: none;
+        box-sizing: border-box;
+        columns: 40;
     }
 
 
