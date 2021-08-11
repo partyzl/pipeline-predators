@@ -1,5 +1,5 @@
 //variables
-const herokuUrl = "pipeline-predators.herokuapp.com"
+const herokuUrl = "https://pipeline-predators.herokuapp.com"
 const newEntry = document.querySelector("#entry").value;
 const body = document.getElementById("main-body");
 const element = document.getElementById('entry')
