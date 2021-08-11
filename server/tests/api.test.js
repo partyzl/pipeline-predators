@@ -3,7 +3,7 @@ const fs = require('fs');
 const server = require('../app.js');
 
 // To use as test data for POST method in /home
-const entryData = JSON.parse(fs.readFileSync('./data/data.json'))[0];
+const entryData = JSON.parse(fs.readFileSync('./server/data/data.json'))[0];
 
 describe('API Server', () => {
     
