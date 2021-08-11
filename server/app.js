@@ -1,9 +1,8 @@
 const express = require('express')
 const cors = require('cors');
 const fs = require('fs');
-const router = express.Router();
-//const bodyParser = require('body-parser')
-//const { entryData } = JSON.parse(fs.readFileSync('./data.json'));
+
+
 
 const app = express();
 app.use(cors());

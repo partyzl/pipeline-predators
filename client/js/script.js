@@ -1,5 +1,5 @@
 //variables
-const herokuUrl = "https://pipeline-predators.herokuapp.com"
+const herokuUrl = "pipeline-predators.herokuapp.com"
 const newEntry = document.querySelector("#entry").value;
 const body = document.getElementById("main-body");
 const element = document.getElementById('entry')
@@ -8,6 +8,7 @@ const element = document.getElementById('entry')
 //display all entries on the page
 const getEntries=()=>{
     fetch(`${herokuUrl}/home`)
+    //fetch(`https://localhost:3000/home`)
     .then(function(response) {
         if(response.status!== 200){
             console.log('There was a problem accessing this site. Status Code: '+ response.status);
@@ -69,6 +70,7 @@ const data = {entry};
 element.addEventListener("submit", function(e){
     e.preventDefault();
     fetch(`${herokuUrl}/home`, {
+    //fetch('https://localhost:3000/home', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
