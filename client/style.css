@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 * {
-    font-family: arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
 }
 
@@ -7,9 +9,8 @@
 
 nav {
     color: white;
+    background-color: black;
 }
-
-/* main body styling */
 
 li {
     display: inline-flex;
@@ -21,23 +22,27 @@ ul {
     box-sizing: border-box;
 }
 
-.img {
-    width: 50%;
-    margin-left: 0px;
+.logo {
+    width: 15%;
 }
 
+.img {
+    width: 30px;
+    height: 10%;
+}
 
-.page-container{
+/* main body styling */
+
+.page-container {
     background-color: rgb(255, 160, 36);
     color: white;
     width: 90%;
     min-height: 90vh;
     min-width: 90vw;
     border-radius: 20px;
-
 }
 
-.post{
+.post {
     width: 95%;
     background-color: rgba(255, 255, 255, 0.618);
     color: black;
@@ -47,35 +52,56 @@ ul {
     border-radius: 20px;
 }
 
-.react:hover{
-    background-color: orange;
-}
-
-.react-buttons{
-    display: flex;
-    flex-direction: rows;
-    justify-content: flex-end;
-}
-
-.emoji-count{
-    display: flex;
-    flex-direction: column;
-}
-
-#plus-icon{
-    border-radius: 100%;
-    border-width: 3px;
-    border-color: white;
+.input {
+    font-weight: bold;
 }
 
 label {
     text-align: center;
 }
 
+/* button styles */
+
+.react {
+    margin: 5px;
+}
+
+.react:hover {
+    background-color: orange;
+    box-shadow: 0 5px 10px 0 rgba(170, 170, 170, 0.8);
+    border-style: inset;
+}
+
+.react-buttons {
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+}
+
+.emoji-count {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 50px;
+    border-style: outset;
+    border-color: tan;
+    padding: 0 10px 0 10px;
+}
+
+#love {
+    color: red;
+}
+
+
+/* footer styles */
+
 .footer {
     width: 100%;
     bottom: 0px;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 
