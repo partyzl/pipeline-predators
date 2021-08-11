@@ -53,6 +53,14 @@ ul {
     border-radius: 20px;
 }
 
+#heading {
+    padding: 25px;
+}
+
+.newEntry {
+
+}
+
 .input {
     font-weight: bold;
 }
