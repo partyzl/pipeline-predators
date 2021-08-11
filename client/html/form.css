@@ -5,16 +5,6 @@
 
 /* nav styling */
 
-li {
-    display: inline-flex;
-    padding: 10px;
-}
-
-ul {
-    padding-top: 15px;
-    box-sizing: border-box;
-}
-
 .img {
     width: 5%;
 }
