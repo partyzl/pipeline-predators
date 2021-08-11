@@ -5,6 +5,7 @@ class Entry {
         this.id = data.id,
         this.entry = data.entry,
         this.comment = data.comment || [],
+        this.giphy = data.giphy || null,
         this.likeEmoji = data.likeEmoji,
         this.cryEmoji = data.cryEmoji,
         this.shockEmoji = data.shockEmoji
