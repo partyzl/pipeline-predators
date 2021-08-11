@@ -1,6 +1,7 @@
 //variables
 const herokuUrl = "https://pipeline-predators.herokuapp.com"
-const newEntry = document.querySelector("form.newEntry")
+const newEntry = document.querySelector("#entry").value;
+const body = document.getElementById("main-body");
 //variables
 
 //display all entries on the page
@@ -41,26 +42,43 @@ const getEntries=()=>{
     })
 }
 
-newEntry.addEventListener("submit", function(e){
-    e.preventDefault();
-    let formElements = document.querySelector("form.newEntry").elements;
-    console.log(formElements);
-    let journalEntry = formElements["entry"].value;
-    let data = {
-        "entry": journalEntry
-    }
-    console.log("Data to POST:", data);
-    sendJournalEntry(data);
-})
+// newEntry.addEventListener("submit", function(e){
+//     e.preventDefault();
+//     let formElements = document.querySelector("form.newEntry").elements;
+//     console.log(formElements);
+//     let journalEntry = formElements["entry"].value;
+//     let data = {
+//         "entry": journalEntry
+//     }
+//     console.log("Data to POST:", data);
+//     sendJournalEntry(data);
+// })
 
-sendJournalEntry = data => {
-    fetch(`${herokuUrl}/create`, {
-        method: 'post',
-        headers: {
-            "Content-type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
-}
+// sendJournalEntry = data => {
+//     fetch(`${herokuUrl}/create`, {
+//         method: 'post',
+//         headers: {
+//             "Content-type": "application/json"
+//         },
+//         body: JSON.stringify(data)
+//     });
+// }
+
+const data = {entry};
+
+fetch(`${herokuUrl}/create`, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+})
+.then(res => res.json())
+.then(data => {
+    body.appendChild(data);
+})
+.catch((error)=>{
+    console.log('Error: ', error);
+})
 
 getEntries();
