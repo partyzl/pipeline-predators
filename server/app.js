@@ -9,19 +9,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-router.get('/', (req, res)=>{
+app.get('/', (req, res)=>{
     res.send('Shh you shouldn\'t be here')
 })
 
-router.post('/', (req, res) => {
+app.post('/', (req, res) => {
     res.send(405, 'Not allowd!');
 });
 
-router.post('/home', (req, res) =>{
+app.post('/home', (req, res) =>{
     res.send(201, req.body);
 })
 
-router.get('/home/', (req,res) =>{
+app.get('/home/', (req,res) =>{
     res.send(JSON.stringify(entryData))
 })
 
