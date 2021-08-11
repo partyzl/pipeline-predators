@@ -16,8 +16,22 @@ class Entry {
         this.comment.shift(comment);
     }
 
-    //reacting with emoji function???
-
+    //reacting with emoji function???switch?
+    emojiCounter(emoji){
+        switch(emoji){
+            case "likeEmoji":
+                this.likeEmoji++;
+                break;
+            case "cryEmoji":
+                this.cryEmoji++;
+                break;
+            case "shockEmoji":
+                this.shockEmoji++;
+                break;
+            default:
+                //do i even need this
+        }
+    }
 }
 
 module.exports = Entry;

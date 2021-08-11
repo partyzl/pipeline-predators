@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router();
 
-
-
 const fs = require('fs');
 
 //need a get route for getting all journal entries
