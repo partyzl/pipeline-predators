@@ -7,7 +7,7 @@ const data = require('../data/data.json')
 const fs = require('fs');
 //wrap them in try catches
 //need a get route for getting all journal entries
-router.get('/home', (req, res)=>{
+router.get('/', (req, res)=>{
     try {
         let entry = Entry.getAllEntries;
         res.status(200)
@@ -21,7 +21,7 @@ router.get('/home', (req, res)=>{
 
 
 //need a route to send entries
-router.post('/home', (req, res)=> {
+router.post('/', (req, res)=> {
     try {
        Entry.newEntry(req.body);
        res.status(201)
@@ -32,5 +32,7 @@ router.post('/home', (req, res)=> {
         .send('you made a boo boo')
     }
 })
+
+//need a route for adding comments??
 
 module.exports = router;
