@@ -2,7 +2,7 @@
 ///////MAKE A DATA FILE ON THE SERVER WITH EMOJI
 // let loveCount;
 // let sadCount;
-// let shockCount;
+
 
 const loveReact = document.getElementById('love');
 const sadReact = document.getElementById('sad');
@@ -25,7 +25,11 @@ function emojiReactions(type){
             default:
                 return false;
         reactButtons.disable = true;
+    
+
             
             }
     }
 }
+
+function
