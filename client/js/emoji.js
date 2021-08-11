@@ -14,15 +14,16 @@ function emojiCount(reactionType){
         data.id[`${reactionType}`] =+;
         }
     .then(postID.label.`${reactionType}`.textContent = data.id[`${reactionType}`])
-    document.getElementById(`${reactionType}`)
-    emojiToggle(reactionType)
-    
+    .then(reactButtons.disabled = true;)
 }
+    // document.getElementById(`${reactionType}`) make status of clicked
+     
 
-function emojiToggle(e){
-    if 
+
+// function emojiToggle(e){
+//     if 
 /// emoji has clicked status and toggles other reactions to disabled
-}
+
 
                     
                     
@@ -33,3 +34,4 @@ function emojiToggle(e){
     }
 }
 
+module.exports { emojiToggle, emojiCount };
