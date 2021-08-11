@@ -22,7 +22,7 @@ app.post('/home', (req, res) =>{
 })
 
 app.get('/home/', (req,res) =>{
-    res.send(JSON.stringify(entryData))
+    res.send('hi')
 })
 
 
