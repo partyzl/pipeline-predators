@@ -5,5 +5,4 @@ function characterCount(){
    characters.textContent = 280 - entry.value.length;
 }
 
-entry.addEventListener('keypress', characterCount);
-entry.addEventListener('keyup', characterCount);
+entry.addEventListener('keydown', characterCount);
