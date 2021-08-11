@@ -1,9 +1,9 @@
 const request = require('supertest');
-const server = require('../app.js');
 const fs = require('fs');
+const server = require('../app.js');
 
 // To use as test data for POST method in /home
-const { entryData } = JSON.parse(fs.readFileSync('./data.json'));
+const entryData = JSON.parse(fs.readFileSync('./server/data/data.json'))[0];
 
 describe('API Server', () => {
     
