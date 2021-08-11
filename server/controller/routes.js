@@ -9,11 +9,11 @@ const fs = require('fs');
 //need a get route for getting all journal entries
 router.get('/', (req, res)=>{
     try {
-        let entry = Entry.getAllEntries;
+        let entry = Entry.getAllEntries();
         res.status(200)
-        .send("entry")
+        .send(entry)
     } catch (error) {
-        console.error(err);
+        console.error(error);
         res.status(404)
         .send('you made a boo boo')
     }
