@@ -75,6 +75,7 @@ fetch(`${herokuUrl}/create`, {
 })
 .then(res => res.json())
 .then(data => {
+  //  console.log(data);
     body.appendChild(data);
 })
 .catch((error)=>{
