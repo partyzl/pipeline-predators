@@ -50,13 +50,13 @@ class Entry {
             let entries = JSON.parse(data);
             let newEntry = new Entry(body);
             newEntry.id = `${entries.length}+1`
-            entries.append(newEntry);
+            entries.push(newEntry);
             fs.writeFile(db, JSON.stringify(entries), (error)=>{
                 if(error){
                     console.log('AHHHHH' + error);
                 }
-                return newEntry;
             })
+            return newEntry;
         })
     }
 }
