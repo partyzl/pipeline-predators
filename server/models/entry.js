@@ -19,6 +19,7 @@ class Entry {
         this.comment.shift(comment);
     }
 
+    //tegans emoji counter
     //reacting with emoji function???switch?
     emojiCounter(emoji){
         switch(emoji){
@@ -38,11 +39,17 @@ class Entry {
     //definitely definitely need to do more reading of fs and its built in methods
     //get all the entries from db
     static getAllEntries = () => {
-        let data = fs.readFileSync(db);
+        let data = fs.readFileSync(db, "utf-8", (err, data)=>{
+            if(err){
+                console.log('Error: ', err);
+                return;
+            }
+        });
         let parsedData = JSON.parse(data);
         let entries = parsedData.map(p => new Entry(p));
         return entries;
     }
+    //returning an array, need to add 'utf8' to change to string
 
     //create a new entry
     static newEntry = (body) => {
