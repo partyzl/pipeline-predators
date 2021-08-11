@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "entry": "Testy",
+        "likeEmoji":"",
+        "cryEmoji":"",
+        "shockEmoji":"",
+        "comment" : [
+            {
+                "comment": "testo"
+            }
+        ]
+    }
+]
