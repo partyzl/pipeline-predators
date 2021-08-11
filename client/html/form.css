@@ -1,3 +1,10 @@
+* {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+}
+
+/* nav styling */
+
 li {
     display: inline-flex;
     padding: 10px;
@@ -7,6 +14,12 @@ ul {
     padding-top: 15px;
     box-sizing: border-box;
 }
+
+.img {
+    width: 5%;
+}
+
+/* main body styling */
 
 #entry {
     height: 100px;
@@ -32,9 +45,8 @@ ul {
     font-size: larger;
 }
 
-.img {
-    width: 5%;
-}
+
+/* footer styling */
 
 .footer {
     width: 100%;

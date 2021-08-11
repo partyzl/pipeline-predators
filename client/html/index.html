@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js" defer></script>
+    <title>Create a New Comment</title>
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top d-flex justify-content-between">
+            <img src='example.png' class="img" alt="placeholder">
+            <ul>
+              <li><button class = 'btn btn-outline-light' onclick="window.location.href = 'homepage.html';">Home</button></li>
+              <li><button class = 'btn btn-outline-light' onclick="window.location.href = 'new-post.html';">Create Post</button></li>
+            </ul>
+          </nav>
+        <!-- Navbar -->
+    </header>
+    <main>
+        <section id="heading" class="mx-auto">
+            <h1>Add a comment to an existing post below...</h1>
+        </section>
+
+        <!-- This would be where the original post would be on the page -->
+        <section class="post-entry form-row justify-content-center mx-auto">
+            <!--unsure if we would put a p in here or a disabled text area, or just leave it as a section-->
+        </section>
+
+        <section class="main-section form-row justify-content-center mx-auto">
+            <!-- New comment input fields (comment, character counter, submit)-->
+            <form class="form-group col-md-4">
+                <section class="py-4">
+                    <label for="comment" data-toggle="tooltip" class="label">Comment: </label>
+                    <textarea name="comment" id="comment" cols="50" rows="4" class="form-control" maxlength="280"></textarea>        
+                    <!-- character counter indentical to new-post.html character counter-->
+                    <small id="entryHelp" class="form-text text-muted"><span id="count">280</span> characters remaining</small> 
+                </section>
+                <button type="submit" class="btn btn-primary">Post Comment</button>
+            </form>
+        </section>
+        <!-- New comment input fields (comment, character counter, submit)-->
+    </main>
+    <footer>
+        <section class="footer">
+            Brought to you by the Pipeline Predators: 
+            <a href="https://github.com/partyzl/pipeline-predators/tree/staging">GitHub</a>    
+        </section>
+    </footer>
+</body>
+</html> 
