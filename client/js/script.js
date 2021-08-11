@@ -64,3 +64,6 @@ sendJournalEntry = data => {
 }
 
 getEntries();
+
+module.exports = getEntries;
+

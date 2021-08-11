@@ -1,5 +1,9 @@
 const request = require('supertest');
 const server = require('../app.js');
+const fs = require('fs');
+
+// To use as test data for POST method in /home
+const { entryData } = JSON.parse(fs.readFileSync('./data.json'));
 
 describe('API Server', () => {
     
@@ -20,9 +24,18 @@ describe('API Server', () => {
     test('Responds to get / with 200', (done) => {
         request(api).get('/').expect(200).expect('Shh you shouldn\'t be here', done);
     });
+    
+    test('Responds to get /home with 200', (done) => {
+        request(api).get('/home').expect(200, done);
+    });
 
-    test('Responds to get /entries with 200', (done) => {
-        request(api).get('/entries').expect(200, done);
+    test('Responds to post /home with 201 and returns entry data', (done) => {
+        request(api)
+        .post('/home')
+        .send(entryData) // Recall entryData is just some test data
+        .set('Accept', 'application/json')
+        .expect(201)
+        .expect(entryData, done);
     });
 
     test('Responds to non existing paths with 404', (done) => {
