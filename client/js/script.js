@@ -1,7 +1,7 @@
 //variables
 const herokuUrl = "https://pipeline-predators.herokuapp.com/home";
 //const newEntry = document.querySelector("#entry").value;
-const body = document.getElementById("page-container");
+const body = document.querySelector(".page-container");
 const element = document.getElementById("entry");
 
 
@@ -26,6 +26,7 @@ const createEntry = data => {
   return indEntry;
 }
 
+//getting an error apendchild is reading null
 const appendEntry = entries => {
   const newJournalEntry = createEntry(entries);
   body.appendChild(newJournalEntry);
