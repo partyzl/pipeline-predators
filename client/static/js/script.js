@@ -8,7 +8,8 @@ const element = document.getElementById("entry");
 //display all entries on the page
 const getEntries = () => {
   //fetch(`${herokuUrl}/home`)
-  fetch(`https://localhost:3000/home`).then(function (response) {
+  fetch(`https://localhost:3000/home`)
+    .then(function (response) {
     if (response.status !== 200) {
       console.log(
         "There was a problem accessing this site. Status Code: " +
@@ -91,4 +92,4 @@ element.addEventListener("submit", function (e) {
 
 getEntries();
 
-module.exports = getEntries;
+module.exports = {getEntries};

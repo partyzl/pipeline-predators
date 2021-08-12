@@ -21,16 +21,12 @@ class Entry {
 
     //tegans emoji counter
     //reacting with emoji function???switch?
-    const reactButtons = document.getElementsByClassName('reactions')
-
-
-    function emojiCount(reactionType){
-        
+    emojiCount(reactionType){
+        const reactButtons = document.getElementsByClassName('reactions');
         switch(reactionType){
           case 'love':
             fetch("http://localhost:4000/emoji")
                 .then(resp => resp.json())
-                })
               .then( data => {
                 data.love = data.love +1;
               })
@@ -41,7 +37,7 @@ class Entry {
             case 'sad':
               fetch("http://localhost:4000/emoji")
                 .then(resp => resp.json())
-                .then( data.sad => {
+                .then(data  => {
                   data.sad = data.sad +1;
                 })
                 .then(console.log(data[1]))
@@ -51,7 +47,7 @@ class Entry {
             case 'shock':
               fetch("http://localhost:4000/emoji")
                 .then(resp => resp.json())
-                .then( data.shock => {
+                .then( data => {
                   data.shock = data.shock+1;
                 })
                 .then(console.log(data[2]))
@@ -60,7 +56,7 @@ class Entry {
             }
           reactButtons.disabled = true; 
           }
-    }
+    
     //definitely definitely need to do more reading of fs and its built in methods
     //get all the entries from db
     static getAllEntries = () => {
@@ -92,6 +88,7 @@ class Entry {
         })
     }
 }
+
 
 module.exports = Entry;
 
