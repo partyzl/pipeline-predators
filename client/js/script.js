@@ -21,8 +21,8 @@ const getEntries = (e) =>{
   .catch(console.warn());
 }
 
-const appendEntry = data => {
-    const newJournalEntry = createEntry(data);
+const appendEntry = entries => {
+    const newJournalEntry = createEntry(entries);
     body.appendChild(newJournalEntry);
 
 }
