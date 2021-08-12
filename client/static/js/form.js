@@ -8,3 +8,4 @@ function characterCount(){
 
 entry.addEventListener('keyup', characterCount);
 entry.addEventListener('keydown', characterCount);
+

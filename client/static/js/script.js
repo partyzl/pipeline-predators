@@ -88,7 +88,7 @@ element.addEventListener("submit", function (e) {
     });
 });
 
-getEntries();
 
+getEntries();
 
 module.exports = getEntries;
