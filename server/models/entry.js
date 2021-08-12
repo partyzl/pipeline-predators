@@ -1,6 +1,7 @@
-const Comment = require('./comment')
-const db = require('../data/data.json')
-const fs = require('fs')
+const Comment = require('./comment');
+// const db = require('../data/data.json');
+const fs = require('fs');
+const { error } = require('console');
 
 class Entry {
     constructor(data) {
@@ -8,19 +9,24 @@ class Entry {
         this.entry = data.entry,
         this.comment = data.comment || [],
         this.gifUrl = data.gifUrl,
-        this.love = data.love,
-        this.sad = data.sad,
-        this.shock = data.shock
+
+        this.love = parseInt(data.love),
+        this.sad = parseInt(data.sad),
+        this.shock = parseInt(data.shock)
+
     }
 
     //adding a comment function
     newComment(data){
         let comment = new Comment(data);
         this.comment.shift(comment);
+        return comment;
     }
 
     //tegans emoji counter
     //reacting with emoji function???switch?
+
+ 
     emojiCount(reactionType){
         const reactButtons = document.getElementsByClassName('reactions');
         switch(reactionType){
@@ -56,16 +62,20 @@ class Entry {
             }
           reactButtons.disabled = true; 
           }
-    
+
+  
     //definitely definitely need to do more reading of fs and its built in methods
     //get all the entries from db
     static getAllEntries = () => {
+      //let data = fs.readFileSync('./server/data/data.json');
+
         let data = fs.readFileSync(db, "utf-8", (err, data)=>{
             if(err){
                 console.log('Error: ', err);
                 return;
             }
         });
+
         let parsedData = JSON.parse(data);
         let entries = parsedData.map(p => new Entry(p));
         return entries;
@@ -74,21 +84,20 @@ class Entry {
 
     //create a new entry
     static newEntry = (body) => {
-        fs.readFile(db, (err, data)=>{
-            let entries = JSON.parse(data);
-            let newEntry = new Entry(body);
-            newEntry.id = `${entries.length}+1`
-            entries.push(newEntry);
-            fs.writeFile(db, JSON.stringify(entries), (error)=>{
-                if(error){
-                    console.log('AHHHHH' + error);
-                }
-            })
-            return newEntry;
+        let newEntry = new Entry(body);
+        let entries = JSON.parse(fs.readFileSync('./server/data/data.json'));
+        
+        newEntry.id = entries.length + 1;
+        entries.push(newEntry);
+        
+        fs.writeFile('./server/data/data.json', JSON.stringify(entries), (error)=>{
+            if(error){
+                return console.log('AHHHHH' + error);
+            }
         })
+        return newEntry;
     }
 }
 
 
 module.exports = Entry;
-
