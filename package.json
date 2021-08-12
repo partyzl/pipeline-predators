@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "file-system": "^2.2.2"
+    "express": "^4.17.1"
   }
 }
