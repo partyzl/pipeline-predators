@@ -1,49 +1,39 @@
 //variables
-const herokuUrl = "https://pipeline-predators.herokuapp.com";
-const newEntry = document.querySelector("#entry").value;
-const body = document.getElementById("main-body");
+const herokuUrl = "https://pipeline-predators.herokuapp.com/home";
+//const newEntry = document.querySelector("#entry").value;
+const body = document.getElementById("page-container");
 const element = document.getElementById("entry");
+const journalEntry = document.getElementById("journal-entry");
+const user = document.getElementById("user");
+const indEntry = document.getElementById("individual");
 //variables
 
 //display all entries on the page
-const getEntries = () => {
-  //fetch(`${herokuUrl}/home`)
-  fetch(`https://localhost:3000/home`).then(function (response) {
-    if (response.status !== 200) {
-      console.log(
-        "There was a problem accessing this site. Status Code: " +
-          response.status
-      );
-      return;
-    }
-    //extract data from promise
-    response.json().then(function (entryData) {
-      // console.log(entryData);
-      for (let i = 0; i < entryData.length; i++) {
-        console.log(entryData[i].entry);
+const getEntries = (e) =>{
+  e.preventDefault();
+  fetch(herokuUrl)
+  .then(r => r.json())
+  .then(data =>{
+    data.map(entries => {
+      appendEntry(entries)
+    })
+  })
+  .catch(console.warn());
+}
 
-        let row = document.createElement("section");
-        row.className = "";
+const appendEntry = data => {
+    const newJournalEntry = createEntry(data);
+    body.appendChild(newJournalEntry);
 
-        let newSection = document.createElement("section");
-        newSection.className = "alert alert-info";
-        let para = document.createElement("p");
-        para.textContent = `${entryData[i].entry}`;
-        let paraComment = document.createElement("p");
-        paraComment.className = "comment";
-        paraComment.textContent = `${entryData[i].comments}`;
+}
 
-        let entryArea = document.createElement("section");
-        entryArea.className = "col-md";
-        entryArea.appendChild(para);
-        entryArea.appendChild(paraComment);
-
-        //still need to append reaction emotes here
-        //maybe get svg's and add functions to up the counter on click
-      }
-    });
-  });
-};
+const createEntry = data => {
+  user.textContent = "Anonymous";
+  journalEntry.textContent = data.entry;
+  indEntry.appendChild(user);
+  indEntry.appendChild(journalEntry);
+  return indEntry;
+}
 
 // newEntry.addEventListener("submit", function(e){
 //     e.preventDefault();
