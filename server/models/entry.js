@@ -40,7 +40,7 @@ class Entry {
             case 'shock':
               this.shock++
               break;
-
+            
             default:
               const err = new Error('This is not one of the emojis');
               console.log(err);
