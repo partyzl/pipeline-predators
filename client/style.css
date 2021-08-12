@@ -166,22 +166,3 @@ label {
 
 }
 
-@media only screen and (max-width: 400px) {
-
-    #Post-Button, #giphy {
-        color: pink;
-        margin: 20px auto auto auto;
-        display: block;
-        position: relative;
-    }
-
-    #Post-Button {
-        left: 1px;
-    }
-
-    #giphy {
-        left: 10%;
-    }
-
-}
-
