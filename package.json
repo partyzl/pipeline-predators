@@ -4,9 +4,10 @@
   "description": "LAP 1 Portfolio Project",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node index.js",
     "dev": "concurrently \"watchify ./index.js -o bundle.js\" \"-m http.server\"",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,10 @@
   "homepage": "https://github.com/partyzl/pipline-predators#readme",
   "devDependencies": {
     "concurrently": "^6.2.1",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "jest-fetch-mock": "^3.0.3",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
