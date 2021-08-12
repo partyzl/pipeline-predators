@@ -16,4 +16,6 @@ const getGif = () =>{
     .catch(error => document.body.appendChild = error)
 }
 
+document.getElementById('giphy').addEventListener('submit', getGif);
+
 module.exports = getGif;
