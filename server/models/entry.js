@@ -52,18 +52,18 @@ class Entry {
 
     //create a new entry
     static newEntry = (body) => {
-        fs.readFile(db, (err, data)=>{
-            let entries = JSON.parse(data);
-            let newEntry = new Entry(body);
-            newEntry.id = `${entries.length}+1`
-            entries.push(newEntry);
-            fs.writeFile(db, JSON.stringify(entries), (error)=>{
-                if(error){
-                    console.log('AHHHHH' + error);
-                }
-            })
-            return newEntry;
+        let newEntry = new Entry(body);
+        let entries = JSON.parse(fs.readFileSync('./server/data/data.json'));
+        
+        newEntry.id = entries.length + 1;
+        entries.push(newEntry);
+        
+        fs.writeFile('./server/data/data.json', JSON.stringify(entries), (error)=>{
+            if(error){
+                return console.log('AHHHHH' + error);
+            }
         })
+        return newEntry;
     }
 }
 
