@@ -126,8 +126,10 @@ button {
         padding: 10px;
     }
 
-    .page-container{
-        background-color: lime;
+    h1 {
+        text-align: center;
+        font-size: x-large;
+        padding: 10px;
     }
 
     textarea {
@@ -137,10 +139,23 @@ button {
         columns: 40;
     }
 
+    #Post-Button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .input {
+        margin-left: -50px;
+    }
+
+    .post {
+        text-align: center;
+    }
 
     .footer {
         text-align: center;
         font-size: small;
+        font-weight: bold;
     }
 
 
