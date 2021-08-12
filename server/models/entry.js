@@ -1,6 +1,6 @@
-const Comment = require('./comment')
-const db = require('../data/data.json')
-const fs = require('fs')
+const Comment = require('./comment');
+const db = require('../data/data.json');
+const fs = require('fs');
 
 class Entry {
     constructor(data) {
@@ -62,4 +62,3 @@ class Entry {
 }
 
 module.exports = Entry;
-

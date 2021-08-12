@@ -3,9 +3,9 @@
         "id": 1,
         "entry": "Testy",
         "gifUrl":"giphy.com",
-        "likeEmoji":"",
-        "cryEmoji":"",
-        "shockEmoji":"",
+        "likeEmoji":"25",
+        "cryEmoji":"17",
+        "shockEmoji":"6",
         "comment" : [
             {
                 "comment": "testo"
