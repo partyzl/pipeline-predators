@@ -1,5 +1,5 @@
 const Comment = require('./comment');
-const db = require('../data/data.json');
+// const db = require('../data/data.json');
 const fs = require('fs');
 const { error } = require('console');
 
@@ -44,7 +44,7 @@ class Entry {
     //definitely definitely need to do more reading of fs and its built in methods
     //get all the entries from db
     static getAllEntries = () => {
-        let data = fs.readFileSync(db);
+        let data = fs.readFileSync('./server/data/data.json');
         let parsedData = JSON.parse(data);
         let entries = parsedData.map(p => new Entry(p));
         return entries;

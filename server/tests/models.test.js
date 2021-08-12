@@ -14,9 +14,14 @@ describe('Comment model', () => {
 
 describe('Entry model', () => {
     
-    // To use as a test journal entry
-    const entryData = JSON.parse(fs.readFileSync('./server/data/data.json'))[0];
-    const entry = new Entry(entryData);
+    
+    let entry;
+    
+    beforeEach(() => {
+        // To use as a test journal entry
+        const entryData = JSON.parse(fs.readFileSync('./server/data/data.json'))[0];
+        entry = new Entry(entryData);
+    })
 
     test('Should make an instance of an Entry', () => {
         expect(entry).toBeInstanceOf(Entry);
@@ -54,5 +59,10 @@ describe('Entry model', () => {
 
     test('emojiCounter method should return the correct error for an incorrect emoji', () => {
         expect(entry.emojiCounter('nonExistentEmoji').message).toBe('This is not one of the emojis');
+    })
+
+    test('getAllEntries shoul get all the entries', () => {
+        const entries = Entry.getAllEntries();
+        expect(entries[0]).toMatchObject(entry);
     })
 })
