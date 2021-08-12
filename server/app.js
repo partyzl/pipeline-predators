@@ -6,6 +6,7 @@ const entryRoutes = require('./controller/routes')
 const app = express();
 app.use(express.static(__dirname + '../client/static'));
 
+app.use('/home', entryRoutes)
 app.use(cors());
 app.use(express.json());
 
