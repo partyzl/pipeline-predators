@@ -2,11 +2,10 @@ const express = require('express')
 const cors = require('cors');
 
 const entryRoutes = require('./controller/routes')
-app.use(express.static(__dirname + '../client/static'));
-
 
 
 const app = express();
+app.use(express.static(__dirname + '../client/static'));
 app.use(cors());
 app.use(express.json());
 
