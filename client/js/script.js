@@ -6,7 +6,7 @@ const newEntry = document.querySelector("form.newEntry")
 
 //display all entries on the page
 const getEntries=()=>{
-    fetch(`${localHost}/home`)
+    fetch(`${herokuUrl}/home`)
     .then(function(response) {
         if(response.status!== 200){
             console.log('There was a problem accessing this site. Status Code: '+ response.status);
