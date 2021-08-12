@@ -33,4 +33,26 @@ describe('Entry model', () => {
         const newComment =  entry.newComment({comment: 'Test Comment for New Comment Test'});
         expect(newComment.comment).toBe('Test Comment for New Comment Test');
     })
+
+    test('emojiCounter method should count up once for the correct emoji', () => {
+        // Recall the emoji counts for entry are 25, 17 and 6 for like, cry and shock respectively
+        entry.emojiCounter('likeEmoji');
+        expect(entry.likeEmoji).toBe(26);
+        expect(entry.cryEmoji).toBe(17);
+        expect(entry.shockEmoji).toBe(6);
+
+        entry.emojiCounter('cryEmoji');
+        expect(entry.likeEmoji).toBe(26);
+        expect(entry.cryEmoji).toBe(18);
+        expect(entry.shockEmoji).toBe(6);
+
+        entry.emojiCounter('shockEmoji');
+        expect(entry.likeEmoji).toBe(26);
+        expect(entry.cryEmoji).toBe(18);
+        expect(entry.shockEmoji).toBe(7);
+    })
+
+    test('emojiCounter method should return the correct error for an incorrect emoji', () => {
+        expect(entry.emojiCounter('nonExistentEmoji').message).toBe('This is not one of the emojis');
+    })
 })
