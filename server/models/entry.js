@@ -1,5 +1,5 @@
 const Comment = require('./comment');
-// const db = require('../data/data.json');
+//const db = require('../data/data.json');
 const fs = require('fs');
 const { error } = require('console');
 
@@ -50,11 +50,14 @@ class Entry {
   
     //definitely definitely need to do more reading of fs and its built in methods
     //get all the entries from db
+    
     static getAllEntries = () => {
-      let data = fs.readFileSync('./server/data/data.json');
 
+      let data = fs.readFileSync('./server/data/data.json'); //thanks for this line Gorazd
+      
       // This does not work becaus db is an array, not a path
       // Also readFileSync doesn't take any callback functions as arguments, that's only readFile
+      
       // let data = fs.readFileSync(db, "utf-8", (err, data)=>{
       //     if(err){
       //         console.log('Error: ', err);
