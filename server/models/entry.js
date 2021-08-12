@@ -8,9 +8,9 @@ class Entry {
         this.entry = data.entry,
         this.comment = data.comment || [],
         this.gifUrl = data.gifUrl,
-        this.likeEmoji = data.likeEmoji,
-        this.cryEmoji = data.cryEmoji,
-        this.shockEmoji = data.shockEmoji
+        this.likeEmoji = parseInt(data.likeEmoji),
+        this.cryEmoji = parseInt(data.cryEmoji),
+        this.shockEmoji = parseInt(data.shockEmoji)
     }
 
     //adding a comment function

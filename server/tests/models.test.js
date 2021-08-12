@@ -23,9 +23,9 @@ describe('Entry model', () => {
         expect(entry.id).toBe(1);
         expect(entry.entry).toBe('Testy');
         expect(entry.gifUrl).toBe('giphy.com');
-        expect(entry.likeEmoji).toBe('25');
-        expect(entry.cryEmoji).toBe('17');
-        expect(entry.shockEmoji).toBe('6');
+        expect(entry.likeEmoji).toBe(25);
+        expect(entry.cryEmoji).toBe(17);
+        expect(entry.shockEmoji).toBe(6);
         expect(entry.comment[0].comment).toBe('testo');
     })
 
