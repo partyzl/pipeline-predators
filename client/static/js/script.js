@@ -88,4 +88,7 @@ element.addEventListener("submit", function (e) {
     });
 });
 
+
+getEntries();
+
 module.exports = getEntries;
