@@ -3,14 +3,37 @@ const herokuUrl = "https://pipeline-predators.herokuapp.com/home";
 //const newEntry = document.querySelector("#entry").value;
 const body = document.getElementById("page-container");
 const element = document.getElementById("entry");
-const journalEntry = document.getElementById("journal-entry");
-const user = document.getElementById("user");
-const indEntry = document.getElementById("individual");
+
+
 //variables
 
 //display all entries on the page
-const getEntries = (e) =>{
-  e.preventDefault();
+
+const createEntry = data => {
+  const user = document.createElement('p');
+  const indEntry= document.createElement('section')
+  const journalEntry = document.createElement('p')
+  
+  journalEntry.setAttribute('class', 'journal-entry')
+  indEntry.setAttribute('class', 'individual')
+  user.setAttribute('class', 'user');
+  
+  user.textContent = "Anonymous";
+  
+  journalEntry.textContent = data.entry;
+  indEntry.appendChild(user);
+  indEntry.appendChild(journalEntry);
+  return indEntry;
+}
+
+const appendEntry = entries => {
+  const newJournalEntry = createEntry(entries);
+  body.appendChild(newJournalEntry);
+  
+}
+
+const getEntries = () =>{
+  //e.preventDefault();
   fetch(herokuUrl)
   .then(r => r.json())
   .then(data =>{
@@ -19,20 +42,6 @@ const getEntries = (e) =>{
     })
   })
   .catch(console.warn());
-}
-
-const appendEntry = entries => {
-    const newJournalEntry = createEntry(entries);
-    body.appendChild(newJournalEntry);
-
-}
-
-const createEntry = data => {
-  user.textContent = "Anonymous";
-  journalEntry.textContent = data.entry;
-  indEntry.appendChild(user);
-  indEntry.appendChild(journalEntry);
-  return indEntry;
 }
 
 // newEntry.addEventListener("submit", function(e){
@@ -81,4 +90,4 @@ element.addEventListener("submit", function (e) {
 getEntries();
 
 
-module.exports = getEntries;
+//module.exports = getEntries;
