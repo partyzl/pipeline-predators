@@ -30,35 +30,17 @@ class Entry {
     emojiCount(reactionType){
         const reactButtons = document.getElementsByClassName('reactions');
         switch(reactionType){
-          case 'love':
-            fetch("http://localhost:4000/home")
-                .then(resp => resp.json())
-              .then( data => {
-                data.love = data.love +1;
-              })
-              .then(console.log(data[1]))
-            
-            break;
+            case 'love':
+                this.love ++;
+                break;
     
             case 'sad':
-              fetch("http://localhost:4000/home")
-                .then(resp => resp.json())
-                .then(data  => {
-                  data.sad = data.sad +1;
-                })
-                .then(console.log(data[1]))
-              
-              break;
+                this.sad ++;
+                break;
     
             case 'shock':
-              fetch("http://localhost:4000/home")
-                .then(resp => resp.json())
-                .then( data => {
-                  data.shock = data.shock+1;
-                })
-                .then(console.log(data[2]))
-              
-              break;
+                this.shock ++;
+                break;
             }
           reactButtons.disabled = true; 
           }
