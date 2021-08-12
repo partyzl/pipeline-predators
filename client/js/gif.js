@@ -1,5 +1,5 @@
-const apiKey;
-const gifUrl;
+const apiKey = '3D6rMW0e6GHURpRDBVNAnjwujtNx2TYc';
+const gifUrl = 'api.giphy.com/v1/gifs/search';
 
 //still need to add the add some ids in and divs in index.html to link this
 const getGif = () =>{
