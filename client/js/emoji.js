@@ -31,7 +31,6 @@ function emojiCount(reactionType){
             .then(console.log(data[1]))
           response.statusCode = 200;
           break;
-        }
 
         case 'shock':
           fetch("http://localhost:4000/emoji")
