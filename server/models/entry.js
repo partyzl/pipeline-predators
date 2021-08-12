@@ -17,6 +17,7 @@ class Entry {
     newComment(data){
         let comment = new Comment(data);
         this.comment.shift(comment);
+        return comment;
     }
 
     //reacting with emoji function???switch?
