@@ -2,14 +2,15 @@ const express = require('express')
 const cors = require('cors');
 
 const entryRoutes = require('./controller/routes')
+const app = express();
 app.use(express.static(__dirname + '../client/static'));
 
 const bodyParser = require('body-parser')
 
-const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(bodyParser());
+//body parser deprecated WHYYY
+//app.use(bodyParser());
 // app.use('/home', entryRoutes);
 
 app.get('/', (req, res)=>{
