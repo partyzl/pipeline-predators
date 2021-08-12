@@ -73,6 +73,14 @@ label {
 
 /* button styles */
 
+#giphy {
+    background-color: orange;
+    color: white;
+    border-color: orange;
+    border-radius: 50px;
+    
+}
+
 #Post-Button {
     background-color: orange;
     color: white;
@@ -98,7 +106,7 @@ label {
     flex-direction: column;
 }
 
-button {
+.react {
     border-style: none;
     border-radius: 50px;
     padding: 0 10px 0 10px;
@@ -107,7 +115,6 @@ button {
 #love {
     color: red;
 }
-
 
 /* footer styles */
 
@@ -119,29 +126,43 @@ button {
 }
 
 /* mobile styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
     .logo {
-        width: 60%;
+        width: 50%;
         padding: 10px;
     }
 
-    .page-container{
-        background-color: lime;
+    h1 {
+        text-align: center;
+        font-size: x-large;
+        padding: 10px;
     }
 
     textarea {
         height: 150px;
         resize: none;
         box-sizing: border-box;
-        columns: 40;
     }
 
+    #Post-Button, #giphy {
+        margin: 20px auto auto auto;
+        display: fixed;
+    }
+
+    .input {
+        margin-left: -50px;
+    }
+
+    .post {
+        text-align: center;
+    }
 
     .footer {
         text-align: center;
         font-size: small;
+        font-weight: bold;
     }
 
-
 }
+

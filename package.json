@@ -4,7 +4,7 @@
   "description": "LAP 1 Portfolio Project",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node index.js",
     "dev": "concurrently \"watchify ./index.js -o bundle.js\" \"-m http.server\"",
     "test": "jest",
     "coverage": "jest --coverage"

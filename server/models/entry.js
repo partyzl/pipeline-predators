@@ -9,9 +9,11 @@ class Entry {
         this.entry = data.entry,
         this.comment = data.comment || [],
         this.gifUrl = data.gifUrl,
-        this.likeEmoji = parseInt(data.likeEmoji),
-        this.cryEmoji = parseInt(data.cryEmoji),
-        this.shockEmoji = parseInt(data.shockEmoji)
+
+        this.love = parseInt(data.love),
+        this.sad = parseInt(data.sad),
+        this.shock = parseInt(data.shock)
+
     }
 
     //adding a comment function
@@ -21,34 +23,64 @@ class Entry {
         return comment;
     }
 
+    //tegans emoji counter
     //reacting with emoji function???switch?
-    emojiCounter(emoji){
-        switch(emoji){
-            case "likeEmoji":
-                this.likeEmoji++;
-                break;
-            case "cryEmoji":
-                this.cryEmoji++;
-                break;
-            case "shockEmoji":
-                this.shockEmoji++;
-                break;
-            default:
-                //do i even need this
-                //yes for error handling?
-                const err = new Error('This is not one of the emojis');
-                console.log(err);
-                return err;
-        }
-    }
+
+ 
+    emojiCount(reactionType){
+        const reactButtons = document.getElementsByClassName('reactions');
+        switch(reactionType){
+          case 'love':
+            fetch("http://localhost:4000/emoji")
+                .then(resp => resp.json())
+              .then( data => {
+                data.love = data.love +1;
+              })
+              .then()
+            response.statusCode = 200;
+            break;
+    
+            case 'sad':
+              fetch("http://localhost:4000/emoji")
+                .then(resp => resp.json())
+                .then(data  => {
+                  data.sad = data.sad +1;
+                })
+                .then(console.log(data[1]))
+              response.statusCode = 200;
+              break;
+    
+            case 'shock':
+              fetch("http://localhost:4000/emoji")
+                .then(resp => resp.json())
+                .then( data => {
+                  data.shock = data.shock+1;
+                })
+                .then(console.log(data[2]))
+              response.statusCode = 200;
+              break;
+            }
+          reactButtons.disabled = true; 
+          }
+
+  
     //definitely definitely need to do more reading of fs and its built in methods
     //get all the entries from db
     static getAllEntries = () => {
-        let data = fs.readFileSync('./server/data/data.json');
+      //let data = fs.readFileSync('./server/data/data.json');
+
+        let data = fs.readFileSync(db, "utf-8", (err, data)=>{
+            if(err){
+                console.log('Error: ', err);
+                return;
+            }
+        });
+
         let parsedData = JSON.parse(data);
         let entries = parsedData.map(p => new Entry(p));
         return entries;
     }
+    //returning an array, need to add 'utf8' to change to string
 
     //create a new entry
     static newEntry = (body) => {
@@ -66,5 +98,6 @@ class Entry {
         return newEntry;
     }
 }
+
 
 module.exports = Entry;
