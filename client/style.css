@@ -157,18 +157,9 @@ label {
 
     #Post-Button, #giphy {
         margin: 20px auto auto auto;
-        display: block;
-    }
-    /*
-    #Post-Button {
-        left: 27%;
+        display: fixed;
     }
 
-    #giphy {
-        left: 62%; 
-    }
- 
-    */
     .input {
         margin-left: -50px;
     }
@@ -182,7 +173,6 @@ label {
         font-size: small;
         font-weight: bold;
     }
-
 
 }
 
