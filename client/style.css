@@ -57,10 +57,6 @@ ul {
     padding: 15px;
 }
 
-.form-group {
-    padding-bottom: 50px;
-}
-
 textarea {
     width: 300px;
     height: 150px;
@@ -78,7 +74,7 @@ label {
 /* button styles */
 
 #giphy {
-    background-color: #ffa600;
+    background-color: orange;
     color: white;
     border-color: orange;
     border-radius: 50px;
@@ -86,15 +82,9 @@ label {
 }
 
 #Post-Button {
-    background-color: rgb(255, 166, 0);
+    background-color: orange;
     color: white;
     border-color: orange;
-    /*position: absolute;
-    left: 42%;*/
-}
-
-#giphy, #Post-Button {
-    margin-top: 20px;
 }
 
 .react {
@@ -116,7 +106,7 @@ label {
     flex-direction: column;
 }
 
-.button {
+.react {
     border-style: none;
     border-radius: 50px;
     padding: 0 10px 0 10px;
@@ -172,25 +162,6 @@ label {
         text-align: center;
         font-size: small;
         font-weight: bold;
-    }
-
-}
-
-@media only screen and (max-width: 400px) {
-
-    #Post-Button, #giphy {
-        color: pink;
-        margin: 20px auto auto auto;
-        display: block;
-        position: relative;
-    }
-
-    #Post-Button {
-        left: 1px;
-    }
-
-    #giphy {
-        left: 10%;
     }
 
 }
