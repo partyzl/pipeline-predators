@@ -88,4 +88,6 @@ element.addEventListener("submit", function (e) {
     });
 });
 
+
 module.exports = getEntries;
+

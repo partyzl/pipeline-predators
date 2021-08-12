@@ -9,8 +9,8 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">    <!-- JavaScript Bundle with Popper -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>    <link rel="stylesheet" href="style.css" type="text/css">
-    <!-- Put favicon image in file-->
-    <link rel='favicon' type='image' href='example.png'>  
+    <!-- Put favicon image in file--> 
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
     <title>Pipeline Predators</title>
   </head>
 
@@ -18,7 +18,7 @@
     <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top d-flex justify-content-between">
-      <img src='logo.PNG' class="logo" alt="Logo">
+      <img src='logo.jpg' class="logo" alt="Pipeline Logo">
     </nav>
       <!-- Navbar -->
   </header>
@@ -27,18 +27,18 @@
         <h1>Make a new post below...</h1>
     </section>
     <!-- New post input fields (name, journal entry, submit)-->
-    <section class="main-section form-row justify-content-center mx-auto">
+    <section class="main-section form-row justify-content-center mx-auto d-flex">
         <section class="form-group col-md-4">
             <section class="py-4">
                 <form method="POST" class="newEntry" role="form">
 
                     <label for="entry" data-toggle="tooltip" title="This is a required field. Please stay within character limit." class="label">Journal Entry: </label>
-                    <textarea name="entry" id="entry" cols="50" rows="20" class="form-control" maxlength="280" required></textarea>        
+                    <textarea name="entry" id="entry" rows="20" class="form-control" maxlength="280" required></textarea>        
                     
                     <small id="entryHelp" class="form-text text-muted"><span id="count">280</span> characters remaining</small>
                     
                 </section>
-                <button type="submit" class="btn btn-primary">Post Entry</button>
+                <button id="Post-Button" type="submit" class="btn btn-primary">Post Entry</button>
             </form>
         </section>
     </section>
