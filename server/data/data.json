@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "entry": "Testy",
+        "gifUrl":"giphy.com",
+        "likeEmoji":"",
+        "cryEmoji":"",
+        "shockEmoji":"",
+        "comment" : [
+            {
+                "comment": "testo"
+            }
+        ]
+    }
+]

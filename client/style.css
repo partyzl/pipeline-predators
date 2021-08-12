@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+/* nav/header styles */
+
+nav {
+    color: white;
+    background-color: black;
+}
+
+li {
+    display: inline-flex;
+    padding: 10px;
+}
+
+ul {
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 15%;
+    padding: 20px;
+}
+
+.img {
+    width: 30px;
+    height: 10%;
+}
+
+/* main body styles */
+
+.page-container {
+    background-color: rgb(255, 160, 36);
+    color: white;
+    width: 90%;
+    min-height: 90vh;
+    min-width: 90vw;
+    border-radius: 20px;
+}
+
+.post {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.618);
+    color: black;
+    border-width: 5px;
+    border-style: double;
+    border-color:lightyellow;
+    border-radius: 20px;
+}
+
+#heading {
+    padding: 15px;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+    columns: 50;
+}
+
+.input, label {
+    font-weight: bold;
+}
+
+label {
+    text-align: center;
+}
+
+/* button styles */
+
+#Post-Button {
+    background-color: orange;
+    color: white;
+    border-color: orange;
+}
+
+.react {
+    margin: 5px;
+}
+
+.react:hover {
+    box-shadow: 0 5px 10px 0 rgba(170, 170, 170, 0.8);
+}
+
+.react-buttons {
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+}
+
+.emoji-count {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-style: none;
+    border-radius: 50px;
+    padding: 0 10px 0 10px;
+}
+
+#love {
+    color: red;
+}
+
+
+/* footer styles */
+
+.footer {
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 600px) {
+
+    .logo {
+        width: 60%;
+        padding: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: x-large;
+        padding: 10px;
+    }
+
+    textarea {
+        height: 150px;
+        resize: none;
+        box-sizing: border-box;
+        columns: 40;
+    }
+
+    #Post-Button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .input {
+        margin-left: -50px;
+    }
+
+    .post {
+        text-align: center;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: small;
+        font-weight: bold;
+    }
+
+
+}
