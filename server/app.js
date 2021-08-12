@@ -1,11 +1,11 @@
 const express = require('express')
 const cors = require('cors');
-
+const db = require('./data/data.json')
 const entryRoutes = require('./controller/routes')
 const app = express();
 app.use(express.static(__dirname + '../client/static'));
 
-const bodyParser = require('body-parser')
+//const bodyParser = require('body-parser')
 
 app.use(cors());
 app.use(express.json());
@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/home/', (req,res) =>{
-    res.send('hi');
+    res.send(db);
 })
 
 app.post('/home', (req, res) => {
