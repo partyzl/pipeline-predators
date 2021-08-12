@@ -1,6 +1,7 @@
 const Comment = require('./comment');
 const db = require('../data/data.json');
 const fs = require('fs');
+const { error } = require('console');
 
 class Entry {
     constructor(data) {
@@ -35,7 +36,9 @@ class Entry {
             default:
                 //do i even need this
                 //yes for error handling?
-                console.error(new Error('This is not one of the emojis'));
+                const err = new Error('This is not one of the emojis');
+                console.log(err);
+                return err;
         }
     }
     //definitely definitely need to do more reading of fs and its built in methods
