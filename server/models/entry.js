@@ -25,33 +25,33 @@ class Entry {
         const reactButtons = document.getElementsByClassName('reactions');
         switch(reactionType){
           case 'love':
-            fetch("http://localhost:4000/emoji")
+            fetch("http://localhost:4000/home")
                 .then(resp => resp.json())
               .then( data => {
                 data.love = data.love +1;
               })
-              .then()
-            response.statusCode = 200;
+              .then(console.log(data[1]))
+            
             break;
     
             case 'sad':
-              fetch("http://localhost:4000/emoji")
+              fetch("http://localhost:4000/home")
                 .then(resp => resp.json())
                 .then(data  => {
                   data.sad = data.sad +1;
                 })
                 .then(console.log(data[1]))
-              response.statusCode = 200;
+              
               break;
     
             case 'shock':
-              fetch("http://localhost:4000/emoji")
+              fetch("http://localhost:4000/home")
                 .then(resp => resp.json())
                 .then( data => {
                   data.shock = data.shock+1;
                 })
                 .then(console.log(data[2]))
-              response.statusCode = 200;
+              
               break;
             }
           reactButtons.disabled = true; 
