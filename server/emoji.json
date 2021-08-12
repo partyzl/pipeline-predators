@@ -1,0 +1,5 @@
+data = { 
+    'likeEmoji': 0
+    'cryEmoji': 0
+    'shockEmoji': 0
+}

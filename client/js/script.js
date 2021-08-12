@@ -1,11 +1,12 @@
 //variables
+const loaclHost = "http://loaclhost:3000"
 const herokuUrl = "https://pipeline-predators.herokuapp.com"
 const newEntry = document.querySelector("form.newEntry")
 //variables
 
 //display all entries on the page
 const getEntries=()=>{
-    fetch(`${herokuUrl}/home`)
+    fetch(`${localHost}/home`)
     .then(function(response) {
         if(response.status!== 200){
             console.log('There was a problem accessing this site. Status Code: '+ response.status);

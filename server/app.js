@@ -9,6 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+
 // const entryRoute = require('./controller/entryController');
 
 app.get('/', (req, res)=>{
@@ -28,6 +29,14 @@ app.get('/home', (req,res) =>{
 })
 
 app.post('/home', (req, res) =>{
+    res.send(201, req.body);
+})
+
+app.get('/emoji', (req, res) => {
+    res.send(JSON.stringify(data));
+})
+
+app.post('/emoji', (req, res) => {
     res.send(201, req.body);
 })
 
