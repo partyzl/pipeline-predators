@@ -11,7 +11,7 @@ The assigned project was to create a community journaling website.
 
 ### Usage
 
-
+- 
 
 ## Technologies used
 
