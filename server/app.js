@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '../client/static'));
 app.use(cors());
 app.use(express.json());
 
-// app.use('/home', entryRoutes);
+app.use('/home', entryRoutes);
 
 app.get('/', (req, res)=>{
     res.send('Shh you shouldn\'t be here')
