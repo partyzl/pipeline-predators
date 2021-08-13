@@ -25,7 +25,3 @@ The assigned project was to create a community journaling website.
 
 ## Process
 
-
-
-## Licence 
-
