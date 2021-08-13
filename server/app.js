@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/home/', (req,res) =>{
-    res.send('hi');
+    res.send(db);
 })
 
 app.post('/home', (req, res) => {
