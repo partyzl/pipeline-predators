@@ -16,19 +16,18 @@ const gifUrl = 'api.giphy.com/v1/gifs/search';
 //     .catch(error => document.body.appendChild = error)
 // }
 
-let gif = document.querySelector('date');
+
 
 function getGif() {
-    gif.innerHTML = '';
-    let gifSearch = document.getElementById('gifSearh').value.trim();
-    let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=${str}`;
+    let gifSearch = document.getElementById('gifSearh')
+    let searchTerm = gifSearch.value.trim();
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=${searchTerm}`;
     fetch(url)
         .then(resp => resp.json())
         .then(json => {
             let img = document.createElement('img');
-            img.src = json.data[0].images.fixed_height_downsampled.url;
-            img.style.cursor = 'pointer';
-            results.appendChild(img);
+            img.src = json.data[0].images.url;
+            document.body.appendChild(img);
             gifSearch.value = '';
         })
         .catch(err => {
@@ -36,14 +35,11 @@ function getGif() {
         });
 }
 
-module.exports = { fetchGiphy };
 
 
 
-document.getElementById('giphy').addEventListener('click', getGif);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e39d7f3b50c2fc62d09c3c7d5cc8f9b386e45cf5
-module.exports = getGif;
+
+
+module.exports = {getGif};

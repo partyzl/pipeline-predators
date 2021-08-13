@@ -87,7 +87,9 @@ element.addEventListener("submit", function (e) {
     });
 });
 
-getEntries();
 
+document.getElementById('giphy').addEventListener('click', getGif());
+document.getElementsByClassName('reactButtons').addEvenetListener('click', Entry.emojiCount());
+getEntries();
 
 //module.exports = getEntries;
