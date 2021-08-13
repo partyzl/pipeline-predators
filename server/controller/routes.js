@@ -6,6 +6,8 @@ const Comment = require('../models/comment')
 const data = require('../data/data.json')
 const fs = require('fs');
 
+router.use(express.json());
+
 //wrap them in try catches
 //need a get route for getting all journal entries
 router.get('/', (req, res)=>{
@@ -26,7 +28,7 @@ router.post('/', (req, res)=> {
     try {
        Entry.newEntry(req.body);
        res.status(201)
-       .send("Yay") 
+       .send(req.body) 
     } catch (error) {
         console.error('AHHHH', err);
         res.status(404)
