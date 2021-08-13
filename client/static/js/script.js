@@ -3,6 +3,7 @@ const herokuUrl = "https://pipeline-predators.herokuapp.com/home";
 //const newEntry = document.querySelector("#entry").value;
 const body = document.querySelector(".page-container");
 const element = document.getElementById("entry");
+const post = document.querySelector(".post")
 
 
 //variables
@@ -15,7 +16,7 @@ const createEntry = data => {
   const journalEntry = document.createElement('p')
   
   journalEntry.setAttribute('class', 'journal-entry')
-  indEntry.setAttribute('class', 'individual')
+  indEntry.setAttribute('class', 'post')
   user.setAttribute('class', 'user');
   
   user.textContent = "Anonymous";

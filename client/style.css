@@ -51,6 +51,7 @@ ul {
     border-style: double;
     border-color:lightyellow;
     border-radius: 20px;
+    margin: 15px;
 }
 
 #heading {
