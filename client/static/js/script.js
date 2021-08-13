@@ -16,7 +16,7 @@ const createEntry = data => {
   const journalEntry = document.createElement('p')
   
   journalEntry.setAttribute('class', 'journal-entry')
-  indEntry.setAttribute('class', 'post')
+  indEntry.setAttribute('class', 'post mx-auto my-3 p-3')
   user.setAttribute('class', 'user');
   
   user.textContent = "Anonymous";
