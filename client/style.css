@@ -71,6 +71,12 @@ label {
     text-align: center;
 }
 
+#gifSearch {
+    height: 30px;
+    width: 150px;
+    margin: 10px 10px 0 10px;
+}
+
 /* button styles */
 
 #giphy {
@@ -85,12 +91,6 @@ label {
     background-color: orange;
     color: white;
     border-color: orange;
-}
-
-#gifSearch {
-    height: 30px;
-    width: 150px;
-    margin: 10px 10px 0 10px;
 }
 
 .react {
@@ -154,6 +154,12 @@ label {
     #Post-Button, #giphy {
         margin: 20px auto auto auto;
         display: fixed;
+    }
+
+    #gifSearch {
+        height: 30px;
+        width: 150px;
+        margin: 27px 10px 0 10px;
     }
 
     .input {
