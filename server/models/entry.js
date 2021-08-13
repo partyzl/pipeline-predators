@@ -3,6 +3,11 @@ const Comment = require('./comment');
 const fs = require('fs');
 const { error } = require('console');
 
+const love = getElementById('love');
+const sad = getElementById('sad');
+const shock = getElementById('shock');
+const reactButtons = document.getElementsByClassName('reactions')
+
 class Entry {
     constructor(data) {
         this.id = data.id,
@@ -31,14 +36,17 @@ class Entry {
         switch(reactionType){
           case 'love':
             this.love++
+            love.textContent = this.love
             break;
 
             case 'sad':
               this.sad++
+              sad.textContent = this.sad
               break;
     
             case 'shock':
               this.shock++
+              shock.textContent = this.shock
               break;
             
             default:
@@ -46,6 +54,7 @@ class Entry {
               console.log(err);
               return err;
         }
+        reactButtons.disabled = true;
     }
   
     //definitely definitely need to do more reading of fs and its built in methods
@@ -90,3 +99,4 @@ class Entry {
 
 
 module.exports = Entry;
+
