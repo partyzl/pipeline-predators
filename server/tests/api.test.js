@@ -2,18 +2,19 @@ const request = require('supertest');
 const fs = require('fs');
 const server = require('../app.js');
 
-// To use as test data for POST method in /home
-const entryData = JSON.parse(fs.readFileSync('./server/data/data.json'))[0];
 
 describe('API Server', () => {
     
     const port = 5000;
     let api;
-
+    let entryData;
+    
     beforeAll(() => {
         api = server.listen(port, () => 
-            console.log(`Test server running on port ${port}`)
+        console.log(`Test server running on port ${port}`)
         );
+        // To use as test data for POST method in /home
+        entryData = JSON.parse(fs.readFileSync('./server/data/data.json'))[0];
     });
 
     afterAll((done) => {

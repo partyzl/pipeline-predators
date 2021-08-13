@@ -28,53 +28,39 @@ class Entry {
 
  
     emojiCount(reactionType){
-        const reactButtons = document.getElementsByClassName('reactions');
         switch(reactionType){
           case 'love':
-            fetch("http://localhost:4000/emoji")
-                .then(resp => resp.json())
-              .then( data => {
-                data.love = data.love +1;
-              })
-              .then()
-            response.statusCode = 200;
+            this.love++                
             break;
     
             case 'sad':
-              fetch("http://localhost:4000/emoji")
-                .then(resp => resp.json())
-                .then(data  => {
-                  data.sad = data.sad +1;
-                })
-                .then(console.log(data[1]))
-              response.statusCode = 200;
+              this.sad++
               break;
     
             case 'shock':
-              fetch("http://localhost:4000/emoji")
-                .then(resp => resp.json())
-                .then( data => {
-                  data.shock = data.shock+1;
-                })
-                .then(console.log(data[2]))
-              response.statusCode = 200;
+              this.shock++
               break;
+
+            default:
+              const err = new Error('This is not one of the emojis');
+              console.log(err);
+              return err;
             }
-          reactButtons.disabled = true; 
+              
           }
 
   
     //definitely definitely need to do more reading of fs and its built in methods
     //get all the entries from db
     static getAllEntries = () => {
-      //let data = fs.readFileSync('./server/data/data.json');
+      let data = fs.readFileSync('./server/data/data.json');
 
-        let data = fs.readFileSync(db, "utf-8", (err, data)=>{
-            if(err){
-                console.log('Error: ', err);
-                return;
-            }
-        });
+        // let data = fs.readFileSync(db, "utf-8", (err, data)=>{
+        //     if(err){
+        //         console.log('Error: ', err);
+        //         return;
+        //     }
+        // });
 
         let parsedData = JSON.parse(data);
         let entries = parsedData.map(p => new Entry(p));
