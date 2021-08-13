@@ -87,6 +87,12 @@ label {
     border-color: orange;
 }
 
+#gifSearch {
+    height: 30px;
+    width: 150px;
+    margin: 27px 10px 0 10px;
+}
+
 .react {
     margin: 5px;
 }
