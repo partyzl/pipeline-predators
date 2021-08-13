@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 const fs = require('fs');
 const Comment = require('../models/comment.js');
 const Entry = require('../models/entry.js');
@@ -30,9 +34,9 @@ describe('Entry model', () => {
         expect(entry.id).toBe(1);
         expect(entry.entry).toBe('Testy');
         expect(entry.gifUrl).toBe('giphy.com');
-        expect(entry.likeEmoji).toBe(25);
-        expect(entry.cryEmoji).toBe(17);
-        expect(entry.shockEmoji).toBe(6);
+        expect(entry.love).toBe(25);
+        expect(entry.sad).toBe(17);
+        expect(entry.shock).toBe(6);
         expect(entry.comment[0].comment).toBe('testo');
     })
 
@@ -41,26 +45,26 @@ describe('Entry model', () => {
         expect(newComment.comment).toBe('Test Comment for New Comment Test');
     })
 
-    test('emojiCounter method should count up once for the correct emoji', () => {
+    test('emojiCount method should count up once for the correct emoji', () => {
         // Recall the emoji counts for entry are 25, 17 and 6 for like, cry and shock respectively
-        entry.emojiCounter('likeEmoji');
-        expect(entry.likeEmoji).toBe(26);
-        expect(entry.cryEmoji).toBe(17);
-        expect(entry.shockEmoji).toBe(6);
+        entry.emojiCount('love');
+        expect(entry.love).toBe(26);
+        expect(entry.sad).toBe(17);
+        expect(entry.shock).toBe(6);
 
-        entry.emojiCounter('cryEmoji');
-        expect(entry.likeEmoji).toBe(26);
-        expect(entry.cryEmoji).toBe(18);
-        expect(entry.shockEmoji).toBe(6);
+        entry.emojiCount('sad');
+        expect(entry.love).toBe(26);
+        expect(entry.sad).toBe(18);
+        expect(entry.shock).toBe(6);
 
-        entry.emojiCounter('shockEmoji');
-        expect(entry.likeEmoji).toBe(26);
-        expect(entry.cryEmoji).toBe(18);
-        expect(entry.shockEmoji).toBe(7);
+        entry.emojiCount('shock');
+        expect(entry.love).toBe(26);
+        expect(entry.sad).toBe(18);
+        expect(entry.shock).toBe(7);
     })
 
-    test('emojiCounter method should return the correct error for an incorrect emoji', () => {
-        expect(entry.emojiCounter('nonExistentEmoji').message).toBe('This is not one of the emojis');
+    test('emojiCount method should return the correct error for an incorrect emoji', () => {
+        expect(entry.emojiCount('nonExistentEmoji').message).toBe('This is not one of the emojis');
     })
 
     test('getAllEntries should get all the entries', () => {
@@ -73,9 +77,9 @@ describe('Entry model', () => {
             id: 76,
             entry: "Test new entry for new entry test",
             gifUrl:"gifs.com",
-            likeEmoji:"90",
-            cryEmoji:"865",
-            shockEmoji:"44",
+            love:"90",
+            sad:"865",
+            shock:"44",
             comment: [
                 {
                     comment: "new entry test comment"
@@ -88,9 +92,9 @@ describe('Entry model', () => {
         expect(newEntry.id).toBe(entries.length + 1);
         expect(newEntry.entry).toBe("Test new entry for new entry test");
         expect(newEntry.gifUrl).toBe("gifs.com");
-        expect(newEntry.likeEmoji).toBe(90);
-        expect(newEntry.cryEmoji).toBe(865);
-        expect(newEntry.shockEmoji).toBe(44);
+        expect(newEntry.love).toBe(90);
+        expect(newEntry.sad).toBe(865);
+        expect(newEntry.shock).toBe(44);
         expect(newEntry.comment[0].comment).toBe("new entry test comment");
     })
 })
