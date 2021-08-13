@@ -66,26 +66,26 @@ const getEntries = () =>{
 //     });
 // }
 
-const data = { entry };
-element.addEventListener("submit", function (e) {
-  e.preventDefault();
-  //fetch(`${herokuUrl}/home`, {
-  fetch("https://localhost:3000/home", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      // body.appendChild(data);
-    })
-    .catch((error) => {
-      console.log("Error: ", error);
-    });
-});
+// const data = { entry };
+// element.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   //fetch(`${herokuUrl}/home`, {
+//   fetch("https://localhost:3000/home", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data);
+//       // body.appendChild(data);
+//     })
+//     .catch((error) => {
+//       console.log("Error: ", error);
+//     });
+// });
 
 
 document.getElementById('giphy').addEventListener('click', getGif());
