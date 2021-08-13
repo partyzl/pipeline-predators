@@ -7,7 +7,7 @@ let scripts;
 
 describe('scripts', () => {
     beforeEach(() => {
-        getEntries = require('../script1.js');
+        getEntries = require('../static/js/script.js');
     })
 
     afterEach(() => {
