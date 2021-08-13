@@ -92,4 +92,4 @@ document.getElementById('giphy').addEventListener('click', getGif());
 document.getElementsByClassName('reactButtons').addEvenetListener('click', Entry.emojiCount());
 getEntries();
 
-//module.exports = getEntries;
+module.exports = getEntries;
