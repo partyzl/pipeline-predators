@@ -5,16 +5,27 @@ The assigned project was to create a community journaling website.
 
 ## Installation and Usage
 
+### Installation
+
+- Clone or download the repo 
+
+### Usage
+
+
 
 ## Technologies used
 
 - HTML, CSS, JavaScript
 - Bootstrap 
 - Node.js
-- JSON
+- Nodemon
+- Jest
 - Heroku 
+- Netlify
 
 ## Process
+
+
 
 ## Licence 
 

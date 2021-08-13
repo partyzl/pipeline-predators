@@ -42,4 +42,8 @@ module.exports = { fetchGiphy };
 
 document.getElementById('giphy').addEventListener('click', getGif);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e39d7f3b50c2fc62d09c3c7d5cc8f9b386e45cf5
 module.exports = getGif;

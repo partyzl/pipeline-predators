@@ -5,6 +5,7 @@ const Entry = require('../models/entry')
 const Comment = require('../models/comment')
 const data = require('../data/data.json')
 const fs = require('fs');
+
 //wrap them in try catches
 //need a get route for getting all journal entries
 router.get('/', (req, res)=>{

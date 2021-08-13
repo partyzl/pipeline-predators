@@ -1,4 +1,4 @@
-///variables
+//variables
 const herokuUrl = "https://pipeline-predators.herokuapp.com/home";
 //const newEntry = document.querySelector("#entry").value;
 const body = document.querySelector(".page-container");
